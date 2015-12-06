@@ -52,6 +52,7 @@
             legend1.Name = "Legend1";
             this.chartScatterplot.Legends.Add(legend1);
             this.chartScatterplot.Location = new System.Drawing.Point(0, 0);
+            this.chartScatterplot.Margin = new System.Windows.Forms.Padding(0);
             this.chartScatterplot.Name = "chartScatterplot";
             this.chartScatterplot.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";

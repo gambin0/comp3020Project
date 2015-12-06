@@ -17,13 +17,3 @@ C:\Users\ben\Google Drive\computerScience\Comp3020\assignments\A3\A3\A3\obj\Debu
 C:\Users\ben\Google Drive\computerScience\Comp3020\assignments\A3\A3\A3\obj\Debug\A3.pdb
 C:\Users\ben\Google Drive\computerScience\Comp3020\assignments\A3\A3\A3\obj\Debug\A3.csprojResolveAssemblyReference.cache
 C:\Users\ben\Google Drive\computerScience\Comp3020\assignments\A3\A3\A3\obj\Debug\A3.Search.resources
-C:\Users\chuck\Desktop\A3\A3\A3\bin\Debug\A3.exe.config
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.exe
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.pdb
-C:\Users\chuck\Desktop\A3\A3\A3\bin\Debug\A3.exe
-C:\Users\chuck\Desktop\A3\A3\A3\bin\Debug\A3.pdb
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.csprojResolveAssemblyReference.cache
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.Form1.resources
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.Properties.Resources.resources
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.Search.resources
-C:\Users\chuck\Desktop\A3\A3\A3\obj\Debug\A3.csproj.GenerateResource.Cache

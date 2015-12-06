@@ -17,35 +17,34 @@ namespace A3
         public Logic()
         {
             loadFromxml();
-
         }
         public static void loadDataToScatterPlot(){
             search = Sort(search);
             System.Windows.Forms.DataVisualization.Charting.Chart chart = Form1.scatter;
 
-            
             chart.ChartAreas["ChartArea1"].AxisY.Name = "Rating";
             chart.ChartAreas["ChartArea1"].AxisX.Name = "Year";
             chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisX.MinorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = false;
-            chart.Series.Clear();
+            chart.Series["Series1"].Points.Clear();
 
+            chart.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            chart.Series["Series1"].MarkerSize = 10;
+            chart.Series["Series1"].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            chart.Series["Series1"].Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            chart.Series["Series1"].Points.SuspendUpdates();
 
             for (int i = 0; i < search.Count; i++)
             {
                 Movie m = search.ElementAt(i);
                 int x = Int32.Parse(m.year);
                 int y = Int32.Parse(m.rating);
-               
-                chart.Series.Add(m.title);
-                chart.Series[m.title].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-                chart.Series[m.title].MarkerSize = 10;
-                chart.Series[m.title].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
-                chart.Series[m.title].Points.AddXY(x, y);
-                chart.Series[m.title].Label = m.title;
+                chart.Series["Series1"].Points.AddXY(x, y);
+                chart.Series["Series1"].Points[i].Label = m.title;
             }
+            chart.Series["Series1"].Points.Invalidate();
 
         }
 

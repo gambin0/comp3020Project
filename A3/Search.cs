@@ -69,19 +69,19 @@ namespace A3
             ArrayList list = new ArrayList();
             if (valid(txtYear.Text))
             {
-                List<Movie> year = Form1.logic.findYear(txtYear.Text.Trim());
+                List<Movie> year = Form1.logic.findYear(txtYear.Text.Trim().ToLower());
                 list.Add(year);
             }
 
             if (valid(txtTitle.Text))
             {
-                List<Movie> title = Form1.logic.findTitle(txtTitle.Text.Trim());
+                List<Movie> title = Form1.logic.findTitle(txtTitle.Text.Trim().ToLower());
                 list.Add(title);
             }
 
             if (valid(txtLength.Text))
             {
-                List<Movie> length = Form1.logic.findLength(txtLength.Text.Trim());
+                List<Movie> length = Form1.logic.findLength(txtLength.Text.Trim().ToLower());
                 list.Add(length);
             }
             if (cmbCertification.SelectedItem != null)
@@ -95,7 +95,7 @@ namespace A3
 
             if (valid(txtDirector.Text))
             {
-                List<Movie> director = Form1.logic.findDirector(txtDirector.Text.Trim());
+                List<Movie> director = Form1.logic.findDirector(txtDirector.Text.Trim().ToLower());
                 list.Add(director);
             }
 
@@ -119,7 +119,7 @@ namespace A3
 
             if (valid(txtActor.Text))
             {
-                List<Movie> actor = Form1.logic.findActor(txtActor.Text.Trim());
+                List<Movie> actor = Form1.logic.findActor(txtActor.Text.Trim().ToLower());
                 list.Add(actor);
             }
 
