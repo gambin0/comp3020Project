@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace A3
 {
@@ -14,22 +16,22 @@ namespace A3
         public static List<String> certifications   = new List<String>();
         public static List<Movie> search            = new List<Movie>();
         public static List<User> users              = new List<User>();
+        public static User CurrentUser = null;
         public Logic()
         {
-            loadFromxml();
+            loadMoviesFromxml();
+            loadUsersFromxml();
         }
         public static void loadDataToScatterPlot(){
             search = Sort(search);
             System.Windows.Forms.DataVisualization.Charting.Chart chart = Form1.scatter;
 
-            chart.ChartAreas["ChartArea1"].AxisY.Name = "Rating";
-            chart.ChartAreas["ChartArea1"].AxisX.Name = "Year";
             chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisX.MinorGrid.Enabled = false;
             chart.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = false;
-            chart.Series["Series1"].Points.Clear();
 
+            chart.Series["Series1"].Points.Clear();
             chart.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             chart.Series["Series1"].MarkerSize = 10;
             chart.Series["Series1"].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
@@ -133,7 +135,7 @@ namespace A3
             {
                 foreach (Movie m in list)
                 {
-                    if (m.director.Equals(input))
+                    if (m.director.Contains(input))
                     {
                         results.Add(m);
                     }
@@ -165,11 +167,13 @@ namespace A3
             {
                 foreach (Movie m in list)
                 {
-                    if (m.actor.Contains(input))
+                    foreach (String act in m.actor)
                     {
-                        results.Add(m);
+                        if (act.Contains(input))
+                        {
+                            results.Add(m);
+                        }
                     }
-
                 }
             }
             return results;
@@ -190,7 +194,7 @@ namespace A3
             }
             return results;
         }
-        private void loadFromxml()
+        private void loadMoviesFromxml()
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("movies.xml");
@@ -219,9 +223,9 @@ namespace A3
                     text = text.ToLower();
                     text = text.Trim();
 
-                    if (text.Equals("Music"))
+                    if (text.Equals("music"))
                     {
-                        text = "Musical";
+                        text = "musical";
                     }
                     if (n.LocalName.Equals("title"))
                     {
@@ -265,11 +269,20 @@ namespace A3
                         actor.Add(text);
                     }
                 }
-                Movie temp = new Movie(title, year, length, certification, director, rating, genre, actor);
+                Movie temp = new Movie();
+                temp.setVars(title, year, length, certification, director, rating, genre, actor);
                 if (!list.Contains(temp))
                 {
                     list.Add(temp);
                 }
+            }
+        }
+        private void loadUsersFromxml()
+        {
+            XmlSerializer serial = new XmlSerializer(typeof(List<User>));
+            using (FileStream fs = new FileStream("test.xml", FileMode.Open, FileAccess.Read))
+            {
+                users = serial.Deserialize(fs) as List<User>;
             }
         }
 

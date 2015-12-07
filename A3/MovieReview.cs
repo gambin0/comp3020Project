@@ -13,12 +13,13 @@ namespace A3
         public int rating;
         public String comments;
 
-        public MovieReview(User owner, Movie movie, int rating, String comments)
+        public void setVar(User owner, Movie movie, int rating, String comments)
         {
             this.owner = owner;
             this.movie = movie;
             this.rating = rating;
             this.comments = comments;
         }
+
     }
 }

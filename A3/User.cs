@@ -10,16 +10,17 @@ namespace A3
     {
         public String username;
         public String password;
+        public List<MovieReview> reviews;
         public int id;
-        public List<MovieReview> reviews = new List<MovieReview>();
 
-        public User(String username, String password)
+        public void setVars(String username, String password)
         {
-            // before creating a use make sure theny dont exist.
             this.username = username;
             this.password = password;
-            id = username.GetHashCode();
+            this.reviews = new List<MovieReview>();
+            this.id = username.GetHashCode();
         }
+
 
         public static bool operator ==(User one, User two)
         {
@@ -49,6 +50,10 @@ namespace A3
         public void AddReview(MovieReview review)
         {
             reviews.Add(review);
+        }
+        public string print()
+        {
+            return " " + username + " " + password + " " + id; 
         }
     }
 }

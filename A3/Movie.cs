@@ -17,7 +17,7 @@ namespace A3
         public int id;
         public List<String> genre;
         public List<String> actor;
-        public Movie(string title, string year, string length, string certification, string director, string rating, List<String> genre, List<String> actor)
+        public void setVars(string title, string year, string length, string certification, string director, string rating, List<String> genre, List<String> actor)
         {
             this.title = title.Trim();
             this.year = year;
@@ -29,6 +29,8 @@ namespace A3
             this.actor = actor;
             this.id = title.GetHashCode();
         }
+
+
         public static bool operator ==(Movie one, Movie two)
         {
             return one.id == two.id;
