@@ -16,11 +16,15 @@ namespace A3
         public static List<String> certifications   = new List<String>();
         public static List<Movie> search            = new List<Movie>();
         public static List<User> users              = new List<User>();
-        public static User CurrentUser = null;
+        public static List<MovieReview> reviews     = new List<MovieReview>();
+        public static User CurrentUser = new User();
+        
         public Logic()
         {
             loadMoviesFromxml();
             loadUsersFromxml();
+
+            CurrentUser.setVars("", "");
         }
         public static void loadDataToScatterPlot(){
             search = Sort(search);

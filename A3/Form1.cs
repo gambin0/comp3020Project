@@ -49,5 +49,11 @@ namespace A3
             Login log = new Login();
             log.Activate();
         }
+
+        private void chartScatterplot_Click(object sender, EventArgs e)
+        {
+            MovieWindow m = new MovieWindow();
+            m.Activate();
+        }
     }
 }
