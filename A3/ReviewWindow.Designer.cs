@@ -162,6 +162,7 @@
             this.Controls.Add(this.reviewText);
             this.Name = "ReviewWindow";
             this.Text = "ReviewWindow";
+            this.Load += new System.EventHandler(this.ReviewWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.star5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();

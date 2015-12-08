@@ -48,6 +48,7 @@ namespace A3
                     if (curr.password.Equals(txtPassword.Text))
                     {
                         Logic.CurrentUser = curr;
+                        Form1.user.Text = curr.username;
                         this.Close();
                     }
                     else

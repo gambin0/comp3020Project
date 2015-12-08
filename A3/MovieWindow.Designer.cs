@@ -254,6 +254,7 @@
             this.Controls.Add(this.movieTitle);
             this.Name = "MovieWindow";
             this.Text = "MovieWindow";
+            this.Load += new System.EventHandler(this.MovieWindow_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -47,8 +47,7 @@ namespace A3
             {
                 //save review
                 Logic.reviews.Add(currReview);
-                Logic.CurrentUser.reviews.Add(currReview);
-
+                Logic.saveReviews();
                 this.Close();
             }
             else
@@ -62,6 +61,11 @@ namespace A3
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ReviewWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

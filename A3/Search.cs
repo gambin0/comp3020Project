@@ -69,33 +69,33 @@ namespace A3
             ArrayList list = new ArrayList();
             if (valid(txtYear.Text))
             {
-                List<Movie> year = Form1.logic.findYear(txtYear.Text.Trim().ToLower());
+                List<Movie> year = Logic.findYear(txtYear.Text.Trim().ToLower());
                 list.Add(year);
             }
 
             if (valid(txtTitle.Text))
             {
-                List<Movie> title = Form1.logic.findTitle(txtTitle.Text.Trim().ToLower());
+                List<Movie> title = Logic.findTitle(txtTitle.Text.Trim().ToLower());
                 list.Add(title);
             }
 
             if (valid(txtLength.Text))
             {
-                List<Movie> length = Form1.logic.findLength(txtLength.Text.Trim().ToLower());
+                List<Movie> length = Logic.findLength(txtLength.Text.Trim().ToLower());
                 list.Add(length);
             }
             if (cmbCertification.SelectedItem != null)
             {
                 if (valid(cmbCertification.SelectedItem.ToString()))
                 {
-                    List<Movie> certification = Form1.logic.findCertification(cmbCertification.SelectedItem.ToString());
+                    List<Movie> certification = Logic.findCertification(cmbCertification.SelectedItem.ToString());
                     list.Add(certification);
                 }
             }
 
             if (valid(txtDirector.Text))
             {
-                List<Movie> director = Form1.logic.findDirector(txtDirector.Text.Trim().ToLower());
+                List<Movie> director = Logic.findDirector(txtDirector.Text.Trim().ToLower());
                 list.Add(director);
             }
 
@@ -103,7 +103,7 @@ namespace A3
             {
                 if (valid(cmbRating.SelectedItem.ToString()))
                 {
-                    List<Movie> rating = Form1.logic.findRating(cmbRating.SelectedItem.ToString());
+                    List<Movie> rating = Logic.findRating(cmbRating.SelectedItem.ToString());
                     list.Add(rating);
                 }
             }
@@ -112,14 +112,14 @@ namespace A3
             {
                 if (valid(cmbGenre.SelectedItem.ToString()))
                 {
-                    List<Movie> genre = Form1.logic.findGenre(cmbGenre.SelectedItem.ToString());
+                    List<Movie> genre = Logic.findGenre(cmbGenre.SelectedItem.ToString());
                     list.Add(genre);
                 }
             }
 
             if (valid(txtActor.Text))
             {
-                List<Movie> actor = Form1.logic.findActor(txtActor.Text.Trim().ToLower());
+                List<Movie> actor = Logic.findActor(txtActor.Text.Trim().ToLower());
                 list.Add(actor);
             }
 

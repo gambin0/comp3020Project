@@ -12,7 +12,7 @@ namespace A3
 {
     public partial class MovieWindow : Form
     {
-        private Movie currMovie = Logic.list.ElementAt(0);
+        public static Movie currMovie = Logic.list.ElementAt(0);
 
         public MovieWindow()
         {
@@ -20,26 +20,28 @@ namespace A3
 
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-
             //fill movie window vars
-            this.movieTitle.Text = currMovie.title;
-            this.labelTime.Text = currMovie.length + " min";
-            this.labelCert.Text = currMovie.certification;
-            this.labelYear.Text = currMovie.year;
-            this.labelRating.Text = currMovie.rating + " stars";
-            this.nameDirector.Text = currMovie.director;
+            loadMovie();
             //  this.nameActors.Text = currMovie.actor.ElementAt(0);
 
             initActors();
             this.Visible = true;
         }
+        public void loadMovie(){
+            movieTitle.Text     = currMovie.title;
+            labelTime.Text      = currMovie.length + " min";
+            labelCert.Text      = currMovie.certification;
+            labelYear.Text      = currMovie.year;
+            labelRating.Text    = currMovie.rating + " stars";
+            nameDirector.Text   = currMovie.director;
+        }
 
         private void reviewButton_Click(object sender, EventArgs e)
         {
             
-            if (!Logic.CurrentUser.username.Equals("") )
+            if (Logic.CurrentUser != null )
             {
-                ReviewWindow review = new ReviewWindow(this.currMovie);
+                ReviewWindow review = new ReviewWindow(currMovie);
                 review.Activate();
             }
             else
@@ -81,8 +83,13 @@ namespace A3
 
         private void reviewsButton_Click(object sender, EventArgs e)
         {
-            ViewReviews rev = new ViewReviews(this.currMovie);
+            ViewReviews rev = new ViewReviews(currMovie);
             rev.Activate();
+        }
+
+        private void MovieWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -66,12 +66,8 @@ namespace A3
                     Logic.users.Add(newUser);
                     Logic.CurrentUser = newUser;
                     Form1.user.Text = username;
-
-                    XmlSerializer serial = new XmlSerializer(typeof(List<User>));
-                    using (FileStream fs = new FileStream("test.xml", FileMode.Create, FileAccess.Write))
-                    {
-                        serial.Serialize(fs, Logic.users);
-                    }
+                    Logic.saveUsers();
+                    
 
                     this.Close();
                 }

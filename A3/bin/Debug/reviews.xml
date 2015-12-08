@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ArrayOfMovieReview xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MovieReview>
+    <owner>
+      <username>samsom</username>
+      <password>samsom</password>
+    </owner>
+    <movie>
+      <title>adventures of casanova</title>
+      <year>1948</year>
+      <length>83</length>
+      <certification>approved</certification>
+      <director>roberto gavaldn</director>
+      <rating>1</rating>
+      <id>2049661809</id>
+      <genre>
+        <string>action</string>
+        <string>adventure</string>
+        <string>history</string>
+        <string>romance</string>
+        <string>war</string>
+      </genre>
+      <actor>
+        <string>arturo de c  rdova</string>
+        <string>lucille bremer</string>
+        <string>turhan bey</string>
+        <string>john sutton</string>
+        <string>george tobias</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>1324587634259876239485763984276592384675938276450812760987163240857620138756</comments>
+  </MovieReview>
+</ArrayOfMovieReview>

@@ -4,4 +4,8 @@
     <username>samsom</username>
     <password>samsom</password>
   </User>
+  <User>
+    <username>bensamsom</username>
+    <password>samsom</password>
+  </User>
 </ArrayOfUser>

@@ -17,15 +17,33 @@ namespace A3
         public static List<Movie> search            = new List<Movie>();
         public static List<User> users              = new List<User>();
         public static List<MovieReview> reviews     = new List<MovieReview>();
-        public static User CurrentUser = new User();
+        public static User CurrentUser = null;
         
         public Logic()
         {
             loadMoviesFromxml();
             loadUsersFromxml();
-
-            CurrentUser.setVars("", "");
+            loadReviewsFromxml();
         }
+        public static void saveUsers()
+        {
+            XmlSerializer serial = new XmlSerializer(typeof(List<User>));
+            using (FileStream fs = new FileStream("users.xml", FileMode.Create, FileAccess.Write))
+            {
+                serial.Serialize(fs, users);
+            }
+        }
+
+        public static void saveReviews()
+        {
+            XmlSerializer serial = new XmlSerializer(typeof(List<MovieReview>));
+            using (FileStream fs = new FileStream("reviews.xml", FileMode.Create, FileAccess.Write))
+            {
+                serial.Serialize(fs, reviews);
+            }
+        }
+
+
         public static void loadDataToScatterPlot(){
             search = Sort(search);
             System.Windows.Forms.DataVisualization.Charting.Chart chart = Form1.scatter;
@@ -59,7 +77,7 @@ namespace A3
             return input.OrderBy(o => o.title).ToList();
         }
 
-        public String listToString(List<String> input)
+        public static String listToString(List<String> input)
         {
             String result = "";
             foreach (String s in input)
@@ -68,7 +86,7 @@ namespace A3
             }
             return result;
         }
-        public List<Movie> findTitle(String input)
+        public static List<Movie> findTitle(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -84,7 +102,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findYear(String input)
+        public static List<Movie> findYear(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -100,7 +118,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findLength(String input)
+        public static List<Movie> findLength(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -116,7 +134,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findCertification(String input)
+        public static List<Movie> findCertification(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -132,7 +150,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findDirector(String input)
+        public static List<Movie> findDirector(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -148,7 +166,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findRating(String input)
+        public static List<Movie> findRating(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -164,7 +182,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findActor(String input)
+        public static List<Movie> findActor(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -182,7 +200,7 @@ namespace A3
             }
             return results;
         }
-        public List<Movie> findGenre(String input)
+        public static List<Movie> findGenre(String input)
         {
             List<Movie> results = new List<Movie>();
             if (!input.Equals(""))
@@ -284,11 +302,19 @@ namespace A3
         private void loadUsersFromxml()
         {
             XmlSerializer serial = new XmlSerializer(typeof(List<User>));
-            using (FileStream fs = new FileStream("test.xml", FileMode.Open, FileAccess.Read))
+            using (FileStream fs = new FileStream("users.xml", FileMode.Open, FileAccess.Read))
             {
                 users = serial.Deserialize(fs) as List<User>;
             }
         }
+        private void loadReviewsFromxml(){
+            XmlSerializer serial = new XmlSerializer(typeof(List<MovieReview>));
+            using (FileStream fs = new FileStream("reviews.xml", FileMode.Open, FileAccess.Read))
+            {
+                reviews = serial.Deserialize(fs) as List<MovieReview>;
+            }
+        }
+
 
     }
 }
