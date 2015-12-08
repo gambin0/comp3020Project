@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.headerReviews = new System.Windows.Forms.Label();
             this.reviewButton = new System.Windows.Forms.Button();
             this.reviewBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // headerReviews
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "69 reviews for Movie Title";
+            this.headerReviews.AutoSize = true;
+            this.headerReviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerReviews.Location = new System.Drawing.Point(24, 27);
+            this.headerReviews.Name = "headerReviews";
+            this.headerReviews.Size = new System.Drawing.Size(257, 25);
+            this.headerReviews.TabIndex = 0;
+            this.headerReviews.Text = "69 reviews for Movie Title";
             // 
             // reviewButton
             // 
@@ -52,6 +52,7 @@
             this.reviewButton.TabIndex = 1;
             this.reviewButton.Text = "Write Review";
             this.reviewButton.UseVisualStyleBackColor = true;
+            this.reviewButton.Click += new System.EventHandler(this.reviewButton_Click);
             // 
             // reviewBox
             // 
@@ -61,6 +62,7 @@
             this.reviewBox.Multiline = true;
             this.reviewBox.Name = "reviewBox";
             this.reviewBox.ReadOnly = true;
+            this.reviewBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.reviewBox.Size = new System.Drawing.Size(454, 210);
             this.reviewBox.TabIndex = 2;
             // 
@@ -71,7 +73,7 @@
             this.ClientSize = new System.Drawing.Size(512, 363);
             this.Controls.Add(this.reviewBox);
             this.Controls.Add(this.reviewButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.headerReviews);
             this.Name = "ViewReviews";
             this.Text = "ViewReviews";
             this.ResumeLayout(false);
@@ -81,7 +83,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label headerReviews;
         private System.Windows.Forms.Button reviewButton;
         private System.Windows.Forms.TextBox reviewBox;
     }

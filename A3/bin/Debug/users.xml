@@ -8,4 +8,20 @@
     <username>bensamsom</username>
     <password>samsom</password>
   </User>
+  <User>
+    <username>gambino</username>
+    <password>123456</password>
+  </User>
+  <User>
+    <username>ttlover</username>
+    <password>123456</password>
+  </User>
+  <User>
+    <username>terminator</username>
+    <password>123456</password>
+  </User>
+  <User>
+    <username>chuck1</username>
+    <password>123456</password>
+  </User>
 </ArrayOfUser>

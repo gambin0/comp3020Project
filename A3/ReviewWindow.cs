@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace A3
 {
@@ -16,6 +17,7 @@ namespace A3
         private int userRating;
         private String req;
         private Movie currMovie;// = Logic.list.ElementAt(0);
+        TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
 
         public ReviewWindow(Movie inMovie)
         {
@@ -23,10 +25,10 @@ namespace A3
 
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             //temp var
             this.currMovie = inMovie;
-            this.movieTitle.Text = currMovie.title;
+            this.movieTitle.Text = myTI.ToTitleCase(currMovie.title);
 
             this.userRating = 1;
             this.req = this.reviewText.Text;

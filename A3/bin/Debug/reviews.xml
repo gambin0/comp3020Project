@@ -31,4 +31,176 @@
     <rating>1</rating>
     <comments>1324587634259876239485763984276592384675938276450812760987163240857620138756</comments>
   </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>jeune fille assassinée, la</title>
+      <year>1975</year>
+      <length>100</length>
+      <certification>x</certification>
+      <director>roger vadim</director>
+      <rating>8</rating>
+      <id>1488440873</id>
+      <genre>
+        <string>crime</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>sirpa lane</string>
+        <string>michel duchaussoy</string>
+        <string>mathieu carri  re</string>
+        <string>roger vadim</string>
+        <string>alexandre astruc</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>This movie was okay , it could have shown more boobs. Its a french movie for crying out loud!</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>ttlover</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>jeune fille assassinée, la</title>
+      <year>1975</year>
+      <length>100</length>
+      <certification>x</certification>
+      <director>roger vadim</director>
+      <rating>8</rating>
+      <id>1488440873</id>
+      <genre>
+        <string>crime</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>sirpa lane</string>
+        <string>michel duchaussoy</string>
+        <string>mathieu carri  re</string>
+        <string>roger vadim</string>
+        <string>alexandre astruc</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>Boobs boob and more boobs everywhere!dddddddddddddddddddIS THIS 60 characters</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>adventures of casanova</title>
+      <year>1948</year>
+      <length>83</length>
+      <certification>approved</certification>
+      <director>roberto gavaldn</director>
+      <rating>1</rating>
+      <id>2049661809</id>
+      <genre>
+        <string>action</string>
+        <string>adventure</string>
+        <string>history</string>
+        <string>romance</string>
+        <string>war</string>
+      </genre>
+      <actor>
+        <string>arturo de c  rdova</string>
+        <string>lucille bremer</string>
+        <string>turhan bey</string>
+        <string>john sutton</string>
+        <string>george tobias</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>Heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>terminator</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>jeune fille assassinée, la</title>
+      <year>1975</year>
+      <length>100</length>
+      <certification>x</certification>
+      <director>roger vadim</director>
+      <rating>8</rating>
+      <id>1488440873</id>
+      <genre>
+        <string>crime</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>sirpa lane</string>
+        <string>michel duchaussoy</string>
+        <string>mathieu carri  re</string>
+        <string>roger vadim</string>
+        <string>alexandre astruc</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaDIE HUMANS</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>chuck1</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>jeune fille assassinée, la</title>
+      <year>1975</year>
+      <length>100</length>
+      <certification>x</certification>
+      <director>roger vadim</director>
+      <rating>8</rating>
+      <id>1488440873</id>
+      <genre>
+        <string>crime</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>sirpa lane</string>
+        <string>michel duchaussoy</string>
+        <string>mathieu carri  re</string>
+        <string>roger vadim</string>
+        <string>alexandre astruc</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa**</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>chuck1</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>possédées du diable, les</title>
+      <year>1976</year>
+      <length>81</length>
+      <certification>x</certification>
+      <director>jesus franco</director>
+      <rating>8</rating>
+      <id>-1855392111</id>
+      <genre>
+        <string>horror</string>
+      </genre>
+      <actor>
+        <string>pamela stanford</string>
+        <string>guy delorme</string>
+        <string>lina romay</string>
+        <string>jacqueline laurent</string>
+        <string>richard bigotini</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>
+
+			Write your review here, must be at least 60 characters.e</comments>
+  </MovieReview>
 </ArrayOfMovieReview>
