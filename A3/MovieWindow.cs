@@ -42,20 +42,29 @@ namespace A3
 
         private void reviewButton_Click(object sender, EventArgs e)
         {
-            
-            if (Logic.CurrentUser != null )
+            String action = "write a review";
+            if (validLogin(action))
             {
                 ReviewWindow review = new ReviewWindow(currMovie);
                 review.Activate();
                 this.Refresh();
-            }
-            else
+            }           
+            
+        }
+
+        private Boolean validLogin(String action)
+        {
+            Boolean valid = true;
+
+            if (Logic.CurrentUser == null)
             {
-                MessageBox.Show("Please create an account or login to write a review");
+                MessageBox.Show("Please create an account or login to " + action);
                 Login log = new Login();
                 log.Activate();
+                valid = false;
             }
-            
+
+            return valid;
         }
 
         private void initActors()
@@ -120,11 +129,21 @@ namespace A3
 
         private void addToWatchList_Click(object sender, EventArgs e)
         {
+            String action = "add movie to Watchlist";
 
+            if (validLogin(action))
+            {
+                Logic.CurrentUser.addToWatchlist(currMovie);
+                //WatchList wlist = new WatchList();
+                //wlist.Activate();
+               
+            }
+            
         }
 
         private void reviewsButton_Click(object sender, EventArgs e)
         {
+            
             ViewReviews rev = new ViewReviews(currMovie);
             rev.Activate();
         }
@@ -138,6 +157,17 @@ namespace A3
         {
             ViewReviews rev = new ViewReviews(currMovie);
             rev.Activate();
+        }
+
+        private void buttonWatchlist_Click(object sender, EventArgs e)
+        {
+            String action = "view your Watchlist";
+            if (validLogin(action))
+            {
+                WatchList wlist = new WatchList();
+                wlist.Activate();
+            }
+            
         }
     }
 }

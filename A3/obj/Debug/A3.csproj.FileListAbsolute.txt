@@ -49,3 +49,4 @@ C:\Users\ben\Documents\GitHub\comp3020Project\A3\obj\Debug\A3.ReviewWindow.resou
 C:\Users\ben\Documents\GitHub\comp3020Project\A3\obj\Debug\A3.Search.resources
 C:\Users\ben\Documents\GitHub\comp3020Project\A3\obj\Debug\A3.ViewReviews.resources
 C:\Users\ben\Documents\GitHub\comp3020Project\A3\obj\Debug\A3.csproj.GenerateResource.Cache
+C:\Users\chuck\Desktop\comp3020Project\A3\obj\Debug\A3.WatchList.resources

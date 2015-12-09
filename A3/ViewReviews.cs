@@ -80,8 +80,8 @@ namespace A3
 
                 review.FormClosing += new FormClosingEventHandler(this.ReviewWindow_FormClosing);
 
-                review.Activate();
-                
+                //review.Activate();
+                review.Show();
                 
             }
             else
@@ -95,6 +95,7 @@ namespace A3
         private void ReviewWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Refresh();
+            this.reviewBox.Refresh();
         }
     }
 

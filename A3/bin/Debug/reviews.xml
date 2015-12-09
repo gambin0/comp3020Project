@@ -203,4 +203,59 @@
 
 			Write your review here, must be at least 60 characters.e</comments>
   </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>french blue</title>
+      <year>1976</year>
+      <length>90</length>
+      <certification>x</certification>
+      <director>lasse braun</director>
+      <rating>3</rating>
+      <id>-880501074</id>
+      <genre>
+        <string>adult</string>
+        <string>documentary</string>
+      </genre>
+      <actor>
+        <string>brigitte maier</string>
+        <string>aria arsilianen</string>
+        <string>claudine beccarie</string>
+        <string>sylvia bourdon</string>
+        <string>willy braque</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>Hellowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>possédées du diable, les</title>
+      <year>1976</year>
+      <length>81</length>
+      <certification>x</certification>
+      <director>jesus franco</director>
+      <rating>8</rating>
+      <id>-1855392111</id>
+      <genre>
+        <string>horror</string>
+      </genre>
+      <actor>
+        <string>pamela stanford</string>
+        <string>guy delorme</string>
+        <string>lina romay</string>
+        <string>jacqueline laurent</string>
+        <string>richard bigotini</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>helllo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</comments>
+  </MovieReview>
 </ArrayOfMovieReview>

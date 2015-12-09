@@ -10,6 +10,7 @@ namespace A3
     {
         public String username;
         public String password;
+        private List<Movie> watchList = new List<Movie>();
 
         public void setVars(String username, String password)
         {
@@ -21,5 +22,20 @@ namespace A3
         {
             return " " + username + " " + password; 
         }
+
+        public void addToWatchlist(Movie newMovie)
+        {
+            watchList.Add(newMovie);
+        }
+        public int sizeWatchlist()
+        {
+            return watchList.Count;
+        }
+        public Movie getMovie(int num)
+        {
+            return watchList.ElementAt(num);
+        }
+
+
     }
 }

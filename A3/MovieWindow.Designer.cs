@@ -38,7 +38,6 @@
             this.linkAmazon = new System.Windows.Forms.LinkLabel();
             this.linkAppStore = new System.Windows.Forms.LinkLabel();
             this.linkPlayStore = new System.Windows.Forms.LinkLabel();
-            this.addToWatchList = new System.Windows.Forms.Button();
             this.reviewButton = new System.Windows.Forms.Button();
             this.labelReviews = new System.Windows.Forms.Label();
             this.labelYear = new System.Windows.Forms.Label();
@@ -46,6 +45,8 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.linkAllReviews = new System.Windows.Forms.LinkLabel();
             this.topReviews = new System.Windows.Forms.TextBox();
+            this.addToWatchList = new System.Windows.Forms.Button();
+            this.buttonWatchlist = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // movieTitle
@@ -70,7 +71,7 @@
             // watchList
             // 
             this.watchList.AutoSize = true;
-            this.watchList.Location = new System.Drawing.Point(106, 113);
+            this.watchList.Location = new System.Drawing.Point(86, 107);
             this.watchList.Name = "watchList";
             this.watchList.Size = new System.Drawing.Size(67, 13);
             this.watchList.TabIndex = 3;
@@ -141,18 +142,6 @@
             this.linkPlayStore.TabIndex = 10;
             this.linkPlayStore.TabStop = true;
             this.linkPlayStore.Text = "playStore";
-            // 
-            // addToWatchList
-            // 
-            this.addToWatchList.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToWatchList.Location = new System.Drawing.Point(46, 93);
-            this.addToWatchList.Name = "addToWatchList";
-            this.addToWatchList.Size = new System.Drawing.Size(51, 33);
-            this.addToWatchList.TabIndex = 2;
-            this.addToWatchList.Text = "+";
-            this.addToWatchList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addToWatchList.UseVisualStyleBackColor = true;
-            this.addToWatchList.Click += new System.EventHandler(this.addToWatchList_Click);
             // 
             // reviewButton
             // 
@@ -227,11 +216,34 @@
             this.topReviews.Size = new System.Drawing.Size(587, 159);
             this.topReviews.TabIndex = 19;
             // 
+            // addToWatchList
+            // 
+            this.addToWatchList.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToWatchList.Image = global::A3.Properties.Resources.plus2;
+            this.addToWatchList.Location = new System.Drawing.Point(46, 92);
+            this.addToWatchList.Name = "addToWatchList";
+            this.addToWatchList.Size = new System.Drawing.Size(34, 34);
+            this.addToWatchList.TabIndex = 2;
+            this.addToWatchList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.addToWatchList.UseVisualStyleBackColor = true;
+            this.addToWatchList.Click += new System.EventHandler(this.addToWatchList_Click);
+            // 
+            // buttonWatchlist
+            // 
+            this.buttonWatchlist.Location = new System.Drawing.Point(501, 150);
+            this.buttonWatchlist.Name = "buttonWatchlist";
+            this.buttonWatchlist.Size = new System.Drawing.Size(83, 23);
+            this.buttonWatchlist.TabIndex = 20;
+            this.buttonWatchlist.Text = "My Watchlist";
+            this.buttonWatchlist.UseVisualStyleBackColor = true;
+            this.buttonWatchlist.Click += new System.EventHandler(this.buttonWatchlist_Click);
+            // 
             // MovieWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 444);
+            this.Controls.Add(this.buttonWatchlist);
             this.Controls.Add(this.topReviews);
             this.Controls.Add(this.linkAllReviews);
             this.Controls.Add(this.labelTime);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.LinkLabel linkAllReviews;
         private System.Windows.Forms.TextBox topReviews;
+        private System.Windows.Forms.Button buttonWatchlist;
     }
 }
