@@ -17,12 +17,18 @@ namespace A3
         int sizeWatchlist;
         TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
         int[] posters =  new int[5] { 0, 1, 2, 3, 4 };
+        int maxPosters = 5;
+
 
         public WatchList()
         {
             InitializeComponent();
             loadUser();
             loadPosters();
+
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.Visible = true;
             
         }
@@ -39,14 +45,129 @@ namespace A3
         {
             
             
-            int posterMod = sizeWatchlist % 5;
+            
 
-            if (sizeWatchlist == 0)
-                posterMod = -1;//no posters
-
-            switch (posterMod)
+            if ( sizeWatchlist < maxPosters) //do initial load
             {
-                case 0:
+                switch (sizeWatchlist)
+                {
+                    case 0:
+                        
+                        break;
+                    case 1:
+                        label1.Visible = true;
+                        label2.Visible = false;
+                        label3.Visible = false;
+                        label4.Visible = false;
+                        label5.Visible = false;
+                        label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                        break;
+                    case 2:
+                        label1.Visible = true;
+                        label2.Visible = true;
+                        label3.Visible = false;
+                        label4.Visible = false;
+                        label5.Visible = false;
+                        label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                        label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                        break;
+                    case 3:
+                        label1.Visible = true;
+                        label2.Visible = true;
+                        label3.Visible = true;
+                        label4.Visible = false;
+                        label5.Visible = false;
+                        label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                        label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                        label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+
+                        break;
+                    case 4:
+                        label1.Visible = true;
+                        label2.Visible = true;
+                        label3.Visible = true;
+                        label4.Visible = true;
+                        label5.Visible = false;
+                        label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                        label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                        label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+                        label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
+                        break;
+                    default:
+                        
+                        break;
+                }
+                
+                
+            }
+            else
+            {
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+                label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
+                label5.Text = myTI.ToTitleCase(currUser.getMovie(posters[4]).title);
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (posters[0] - 5 >= 0 )
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    posters[i] -= 5;
+                }
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+                label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
+                label5.Text = myTI.ToTitleCase(currUser.getMovie(posters[4]).title);
+
+                loadUser();
+                this.Refresh();
+                //reloadPage();
+                //Application.DoEvents();
+
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int length = posters.Length;
+            int last = 4;
+
+
+            if(sizeWatchlist > 5 )
+            {
+
+                
+
+                
+                if (posters[4] + 5  < sizeWatchlist )
+                {
+
+                    //increase poster indexes
+                    for (int i = 0; i < length; i++)
+                    {
+                        posters[i] += 5;
+                    }
+
+                    //change all 5 posters
                     label1.Visible = true;
                     label2.Visible = true;
                     label3.Visible = true;
@@ -57,76 +178,106 @@ namespace A3
                     label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
                     label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
                     label5.Text = myTI.ToTitleCase(currUser.getMovie(posters[4]).title);
-                    break;
-                case 1:
-                    label1.Visible = true;
-                    label2.Visible = false;
-                    label3.Visible = false;
-                    label4.Visible = false;
-                    label5.Visible = false;
-                    label1.Text = myTI.ToTitleCase( currUser.getMovie(posters[0]).title );
-                    break;
-                case 2:
-                    label1.Visible = true;
-                    label2.Visible = true;
-                    label3.Visible = false;
-                    label4.Visible = false;
-                    label5.Visible = false;
-                    label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
-                    label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
-                    break;
-                case 3:
-                    label1.Visible = true;
-                    label2.Visible = true;
-                    label3.Visible = true;
-                    label4.Visible = false;
-                    label5.Visible = false;
-                    label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
-                    label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
-                    label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
-                    
-                    break;
-                case 4:
-                    label1.Visible = true;
-                    label2.Visible = true;
-                    label3.Visible = true;
-                    label4.Visible = true;
-                    label5.Visible = false;
-                    label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
-                    label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
-                    label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
-                    label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
-                    break;
-                default:
-                    //do nothing 
-                    break;
-            }
-        }
+                }
+                else if (posters[0] + 5 <= sizeWatchlist-1) //change what is required.
+                {
+                    int posterMod = sizeWatchlist % maxPosters;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                posters[i] -= 5;
-            }
-            loadPosters();
-            this.Refresh();
-            //Application.DoEvents();
-        }
+                    //increase poster indexes
+                    for (int i = 0; i < length; i++)
+                    {
+                        posters[i] += 5;
+                    }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            int max = sizeWatchlist;
-            if (max == 0)
-                max = 5;
-            for (int i=0; i<max; i++)
-            {
-                posters[i] += 5;
+                    switch (posterMod)
+                    {
+                        case 0:
+                            label1.Visible = true;
+                            label2.Visible = true;
+                            label3.Visible = true;
+                            label4.Visible = true;
+                            label5.Visible = true;
+                            label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                            label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                            label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+                            label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
+                            label5.Text = myTI.ToTitleCase(currUser.getMovie(posters[4]).title);
+
+                            break;
+                        case 1:
+                            label1.Visible = true;
+                            label2.Visible = false;
+                            label3.Visible = false;
+                            label4.Visible = false;
+                            label5.Visible = false;
+                            label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                            break;
+                        case 2:
+                            label1.Visible = true;
+                            label2.Visible = true;
+                            label3.Visible = false;
+                            label4.Visible = false;
+                            label5.Visible = false;
+                            label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                            label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                            break;
+                        case 3:
+                            label1.Visible = true;
+                            label2.Visible = true;
+                            label3.Visible = true;
+                            label4.Visible = false;
+                            label5.Visible = false;
+                            label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                            label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                            label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+
+                            break;
+                        case 4:
+                            label1.Visible = true;
+                            label2.Visible = true;
+                            label3.Visible = true;
+                            label4.Visible = true;
+                            label5.Visible = false;
+                            label1.Text = myTI.ToTitleCase(currUser.getMovie(posters[0]).title);
+                            label2.Text = myTI.ToTitleCase(currUser.getMovie(posters[1]).title);
+                            label3.Text = myTI.ToTitleCase(currUser.getMovie(posters[2]).title);
+                            label4.Text = myTI.ToTitleCase(currUser.getMovie(posters[3]).title);
+                            break;
+                        default:
+                            //do nothing 
+                            break;
+                    }
+                }//end if
+
+                //valid to refresh
+                loadUser();
+                this.Refresh();
+
+               // reloadPage();
             }
-            loadPosters();
-            this.Refresh();
+            
+            
             
            // Application.DoEvents();
+        }
+
+        private void reloadPage()
+        {
+            loadUser();
+            loadPosters();
+
+            this.Refresh();
+        }
+
+        private void linkLabelFacebook_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("You're watchlist has been shared on your facebook news feed!");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Email em = new Email();
+            em.Activate();
         }
     }
 }

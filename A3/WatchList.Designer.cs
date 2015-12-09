@@ -35,7 +35,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.labelShare = new System.Windows.Forms.Label();
             this.labelTitles = new System.Windows.Forms.Label();
-            this.buttonAddMovie = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonLeft = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelFacebook = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // header
@@ -59,7 +60,7 @@
             // 
             this.labelPrivacy.AutoSize = true;
             this.labelPrivacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrivacy.Location = new System.Drawing.Point(231, 57);
+            this.labelPrivacy.Location = new System.Drawing.Point(231, 65);
             this.labelPrivacy.Name = "labelPrivacy";
             this.labelPrivacy.Size = new System.Drawing.Size(153, 20);
             this.labelPrivacy.TabIndex = 1;
@@ -69,11 +70,11 @@
             // 
             this.labelSort.AutoSize = true;
             this.labelSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSort.Location = new System.Drawing.Point(319, 92);
+            this.labelSort.Location = new System.Drawing.Point(250, 100);
             this.labelSort.Name = "labelSort";
-            this.labelSort.Size = new System.Drawing.Size(65, 20);
+            this.labelSort.Size = new System.Drawing.Size(134, 20);
             this.labelSort.TabIndex = 2;
-            this.labelSort.Text = "Sort By:";
+            this.labelSort.Text = "Sort Watchlist By:";
             // 
             // comboBox1
             // 
@@ -83,7 +84,7 @@
             "Only me",
             "My Friends",
             "Everyone"});
-            this.comboBox1.Location = new System.Drawing.Point(390, 56);
+            this.comboBox1.Location = new System.Drawing.Point(390, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
@@ -97,7 +98,7 @@
             "Name",
             "Year",
             "Length"});
-            this.comboBox2.Location = new System.Drawing.Point(390, 94);
+            this.comboBox2.Location = new System.Drawing.Point(390, 102);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 4;
@@ -116,20 +117,11 @@
             // 
             this.labelTitles.AutoSize = true;
             this.labelTitles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitles.Location = new System.Drawing.Point(48, 106);
+            this.labelTitles.Location = new System.Drawing.Point(65, 106);
             this.labelTitles.Name = "labelTitles";
             this.labelTitles.Size = new System.Drawing.Size(59, 20);
             this.labelTitles.TabIndex = 8;
             this.labelTitles.Text = "# Titles";
-            // 
-            // buttonAddMovie
-            // 
-            this.buttonAddMovie.Location = new System.Drawing.Point(52, 61);
-            this.buttonAddMovie.Name = "buttonAddMovie";
-            this.buttonAddMovie.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddMovie.TabIndex = 9;
-            this.buttonAddMovie.Text = "Add Movie";
-            this.buttonAddMovie.UseVisualStyleBackColor = true;
             // 
             // buttonRight
             // 
@@ -201,18 +193,41 @@
             this.label5.Text = "label1\r\n\r\n\r\n";
             this.label5.Visible = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(38, 360);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(32, 13);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Email";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabelFacebook
+            // 
+            this.linkLabelFacebook.AutoSize = true;
+            this.linkLabelFacebook.Location = new System.Drawing.Point(75, 360);
+            this.linkLabelFacebook.Name = "linkLabelFacebook";
+            this.linkLabelFacebook.Size = new System.Drawing.Size(55, 13);
+            this.linkLabelFacebook.TabIndex = 21;
+            this.linkLabelFacebook.TabStop = true;
+            this.linkLabelFacebook.Text = "Facebook";
+            this.linkLabelFacebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacebook_LinkClicked);
+            // 
             // WatchList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(580, 422);
+            this.Controls.Add(this.linkLabelFacebook);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonAddMovie);
             this.Controls.Add(this.labelTitles);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.buttonLeft);
@@ -240,11 +255,12 @@
         private System.Windows.Forms.Button buttonLeft;
         private System.Windows.Forms.Button buttonRight;
         private System.Windows.Forms.Label labelTitles;
-        private System.Windows.Forms.Button buttonAddMovie;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelFacebook;
     }
 }

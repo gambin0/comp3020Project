@@ -30,8 +30,10 @@ namespace A3
             this.currMovie = inMovie;
             this.movieTitle.Text = myTI.ToTitleCase(currMovie.title);
 
-            this.userRating = 1;
+            this.userRating = 3;
             this.req = this.reviewText.Text;
+
+            updateRateMessage();
 
             this.Visible = true;
         }
@@ -68,6 +70,50 @@ namespace A3
         private void ReviewWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void star1_Click(object sender, EventArgs e)
+        {
+            userRating = 1;
+            updateRateMessage();
+        }
+
+        private void star2_Click(object sender, EventArgs e)
+        {
+            userRating = 2;
+            updateRateMessage();
+        }
+
+        private void star3_Click(object sender, EventArgs e)
+        {
+            userRating = 3;
+            updateRateMessage();
+        }
+
+        private void star4_Click(object sender, EventArgs e)
+        {
+            userRating = 4;
+            updateRateMessage();
+        }
+
+        private void star5_Click(object sender, EventArgs e)
+        {
+            userRating = 5;
+            updateRateMessage();
+        }
+
+        private void updateRateMessage()
+        {
+            if (userRating == 1)
+            {
+                labelRate.Text = "Your rating is " + userRating.ToString() + " star";
+            }
+            else
+            {
+                labelRate.Text = "Your rating is " + userRating.ToString() + " stars";
+            }
+
+            
         }
     }
 }

@@ -258,4 +258,117 @@
     <rating>1</rating>
     <comments>helllo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</comments>
   </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>terminator</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>french blue</title>
+      <year>1976</year>
+      <length>90</length>
+      <certification>x</certification>
+      <director>lasse braun</director>
+      <rating>3</rating>
+      <id>-880501074</id>
+      <genre>
+        <string>adult</string>
+        <string>documentary</string>
+      </genre>
+      <actor>
+        <string>brigitte maier</string>
+        <string>aria arsilianen</string>
+        <string>claudine beccarie</string>
+        <string>sylvia bourdon</string>
+        <string>willy braque</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>This is skyneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>terminator</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>possédées du diable, les</title>
+      <year>1976</year>
+      <length>81</length>
+      <certification>x</certification>
+      <director>jesus franco</director>
+      <rating>8</rating>
+      <id>-1855392111</id>
+      <genre>
+        <string>horror</string>
+      </genre>
+      <actor>
+        <string>pamela stanford</string>
+        <string>guy delorme</string>
+        <string>lina romay</string>
+        <string>jacqueline laurent</string>
+        <string>richard bigotini</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>helooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>liebe unter siebzehn</title>
+      <year>1971</year>
+      <length>87</length>
+      <certification>x</certification>
+      <director>veit relin</director>
+      <rating>9</rating>
+      <id>-1060236873</id>
+      <genre>
+        <string>comedy</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>viola b  hmelt</string>
+        <string>karin g  tz</string>
+        <string>claudia h  ll</string>
+        <string>eva mattes</string>
+        <string>gernot m  hner</string>
+      </actor>
+    </movie>
+    <rating>1</rating>
+    <comments>Mamamiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</comments>
+  </MovieReview>
+  <MovieReview>
+    <owner>
+      <username>gambino</username>
+      <password>123456</password>
+    </owner>
+    <movie>
+      <title>jeune fille assassinée, la</title>
+      <year>1975</year>
+      <length>100</length>
+      <certification>x</certification>
+      <director>roger vadim</director>
+      <rating>8</rating>
+      <id>1488440873</id>
+      <genre>
+        <string>crime</string>
+        <string>drama</string>
+      </genre>
+      <actor>
+        <string>sirpa lane</string>
+        <string>michel duchaussoy</string>
+        <string>mathieu carri  re</string>
+        <string>roger vadim</string>
+        <string>alexandre astruc</string>
+      </actor>
+    </movie>
+    <rating>5</rating>
+    <comments>
+
+			Write your review here, must be at least 60 characters.11</comments>
+  </MovieReview>
 </ArrayOfMovieReview>

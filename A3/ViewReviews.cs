@@ -94,8 +94,10 @@ namespace A3
 
         private void ReviewWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.reviewCount = loadReviews();
+            this.loadHeader();
             this.Refresh();
-            this.reviewBox.Refresh();
+            //this.reviewBox.Refresh();
         }
     }
 

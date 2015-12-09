@@ -38,6 +38,8 @@
             this.star3 = new System.Windows.Forms.PictureBox();
             this.star2 = new System.Windows.Forms.PictureBox();
             this.star1 = new System.Windows.Forms.PictureBox();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.labelHint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.star5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star3)).BeginInit();
@@ -104,6 +106,7 @@
             this.star5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.star5.TabIndex = 9;
             this.star5.TabStop = false;
+            this.star5.Click += new System.EventHandler(this.star5_Click);
             // 
             // star4
             // 
@@ -114,6 +117,7 @@
             this.star4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.star4.TabIndex = 8;
             this.star4.TabStop = false;
+            this.star4.Click += new System.EventHandler(this.star4_Click);
             // 
             // star3
             // 
@@ -124,6 +128,7 @@
             this.star3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.star3.TabIndex = 7;
             this.star3.TabStop = false;
+            this.star3.Click += new System.EventHandler(this.star3_Click);
             // 
             // star2
             // 
@@ -134,6 +139,7 @@
             this.star2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.star2.TabIndex = 6;
             this.star2.TabStop = false;
+            this.star2.Click += new System.EventHandler(this.star2_Click);
             // 
             // star1
             // 
@@ -144,12 +150,33 @@
             this.star1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.star1.TabIndex = 5;
             this.star1.TabStop = false;
+            this.star1.Click += new System.EventHandler(this.star1_Click);
+            // 
+            // labelRate
+            // 
+            this.labelRate.AutoSize = true;
+            this.labelRate.Location = new System.Drawing.Point(414, 94);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(71, 13);
+            this.labelRate.TabIndex = 12;
+            this.labelRate.Text = "Your rating is:";
+            // 
+            // labelHint
+            // 
+            this.labelHint.AutoSize = true;
+            this.labelHint.Location = new System.Drawing.Point(50, 107);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(104, 13);
+            this.labelHint.TabIndex = 13;
+            this.labelHint.Text = "( Click a star to rate )";
             // 
             // ReviewWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 283);
+            this.Controls.Add(this.labelHint);
+            this.Controls.Add(this.labelRate);
             this.Controls.Add(this.movieTitle);
             this.Controls.Add(this.star5);
             this.Controls.Add(this.star4);
@@ -185,5 +212,7 @@
         private System.Windows.Forms.PictureBox star4;
         private System.Windows.Forms.PictureBox star5;
         private System.Windows.Forms.Label movieTitle;
+        private System.Windows.Forms.Label labelRate;
+        private System.Windows.Forms.Label labelHint;
     }
 }

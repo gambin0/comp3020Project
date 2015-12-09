@@ -23,12 +23,10 @@ namespace A3
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             //fill movie window vars
             loadMovie();
-            //  this.nameActors.Text = currMovie.actor.ElementAt(0);
-
-            initActors();
-            //loadTopReviews();
+            
             this.Visible = true;
         }
         public void loadMovie(){
@@ -36,8 +34,10 @@ namespace A3
             labelTime.Text      = currMovie.length + " min";
             labelCert.Text      = currMovie.certification.ToUpper();
             labelYear.Text      = currMovie.year;
-            labelRating.Text    = currMovie.rating + " stars";
+            initRating();
             nameDirector.Text   = myTI.ToTitleCase(currMovie.director);
+            initActors();
+            loadTopReviews();
         }
 
         private void reviewButton_Click(object sender, EventArgs e)
@@ -113,12 +113,12 @@ namespace A3
             {
                 if (rev.movie.Equals(currMovie) && count < 3)
                 {
-                    review = formatReview(rev) + "\r\n\r\n";
+                    review += formatReview(rev) + "\r\n\r\n";
                     count += 1;
                 }
 
             }
-            this.topReviews.Text = review;
+            topReviews.Text = review;
         }
 
         private String formatReview(MovieReview review)
@@ -166,6 +166,23 @@ namespace A3
             {
                 WatchList wlist = new WatchList();
                 wlist.Activate();
+            }
+            
+        }
+
+        private void initRating()
+        {
+            //int rating = Int32.Parse(currMovie.rating);
+            double rating = Convert.ToDouble(currMovie.rating);
+            rating = rating / 2;
+
+            if (rating == 1)
+            {
+                labelRating.Text = rating.ToString() + " Star";
+            }
+            else
+            {
+                labelRating.Text = rating.ToString() + " Stars";
             }
             
         }

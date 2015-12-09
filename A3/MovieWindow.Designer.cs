@@ -62,11 +62,12 @@
             // labelRating
             // 
             this.labelRating.AutoSize = true;
+            this.labelRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRating.Location = new System.Drawing.Point(43, 60);
             this.labelRating.Name = "labelRating";
-            this.labelRating.Size = new System.Drawing.Size(103, 13);
+            this.labelRating.Size = new System.Drawing.Size(83, 16);
             this.labelRating.TabIndex = 1;
-            this.labelRating.Text = "star rating goes here";
+            this.labelRating.Text = "star rating ";
             // 
             // watchList
             // 
@@ -230,9 +231,10 @@
             // 
             // buttonWatchlist
             // 
-            this.buttonWatchlist.Location = new System.Drawing.Point(501, 150);
+            this.buttonWatchlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWatchlist.Location = new System.Drawing.Point(501, 107);
             this.buttonWatchlist.Name = "buttonWatchlist";
-            this.buttonWatchlist.Size = new System.Drawing.Size(83, 23);
+            this.buttonWatchlist.Size = new System.Drawing.Size(114, 28);
             this.buttonWatchlist.TabIndex = 20;
             this.buttonWatchlist.Text = "My Watchlist";
             this.buttonWatchlist.UseVisualStyleBackColor = true;
